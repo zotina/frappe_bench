@@ -1,0 +1,12 @@
+{
+ "db_name": "_4072d1dbcc0529b3",
+ "db_password": "zz9Q7ZON19GeVD2n",
+ "db_type": "mariadb",
+ "db_user": "_4072d1dbcc0529b3",
+ "developer_mode" : 1 ,
+ "jwt_secret" : "H7d5FDsq9LmAkP3TzR8WbE2xYvN6jC1oI4gU0pQnXyJZcVfBhM5SlO7iKaGu3wDtE9r2sF0qL8mN6bV4xZ7yHpW1jI3oA2cK5dR9eS",
+ "redis_cache": "redis://127.0.0.1:13000",
+ "redis_queue": "redis://127.0.0.1:11000",
+ "redis_socketio": "redis://127.0.0.1:13000",
+ "log_level": "DEBUG"
+}

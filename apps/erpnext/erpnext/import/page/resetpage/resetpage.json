@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2025-04-24 08:04:06.717704",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "delete",
+ "idx": 0,
+ "modified": "2025-04-24 08:04:06.717704",
+ "modified_by": "Administrator",
+ "module": "import",
+ "name": "resetpage",
+ "owner": "Administrator",
+ "page_name": "resetpage",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}

@@ -1,0 +1,25 @@
+sudo apt update
+sudo apt install software-properties-common dirmngr
+sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+sudo add-apt-repository 'deb [arch=amd64] http://mirror.23media.com/mariadb/repo/10.6/ubuntu jammy main'
+
+
+sudo apt update
+sudo apt install mariadb-server
+
+
+source ~/erpnext-env/bin/activate
+
+ALTER USER root IDENTIFIED BY 'zotina';
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'zotina';
+
+FLUSH PRIVILEGES;
+
+redis-server
+
+http://erpnext.localhost:8000/app
+
+
+Administrator 
+admin

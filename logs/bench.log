@@ -1,0 +1,204 @@
+2025-04-22 14:23:54,739 DEBUG cd frappe-bench && python3 -m venv env
+2025-04-22 14:24:07,001 DEBUG cd frappe-bench && /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2025-04-22 14:24:15,142 DEBUG cd frappe-bench && /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/env/bin/python -m pip install --quiet wheel
+2025-04-22 14:24:19,542 LOG Getting frappe
+2025-04-22 14:24:19,543 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2025-04-22 14:24:34,120 LOG Installing frappe
+2025-04-22 14:24:34,121 DEBUG cd /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench && /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/apps/frappe 
+2025-04-22 14:29:46,974 DEBUG cd /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/apps/frappe && yarn install --check-files
+2025-04-22 14:31:01,836 DEBUG cd frappe-bench && bench build
+2025-04-22 14:31:02,469 INFO /home/zotina/erpnext-env/bin/bench build
+2025-04-22 14:32:08,353 LOG setting up backups
+2025-04-22 14:32:08,377 LOG backups were set up
+2025-04-22 14:32:08,378 INFO Bench frappe-bench initialized
+2025-04-22 14:32:50,842 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 14:32:51,857 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 14:32:51,938 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 14:32:51,990 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 14:32:52,036 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 14:38:03,081 INFO /home/zotina/erpnext-env/bin/bench new-site erpnext.localhost
+2025-04-22 14:43:37,099 INFO /home/zotina/erpnext-env/bin/bench new-site erpnext.localhost
+2025-04-22 14:51:44,807 INFO /home/zotina/erpnext-env/bin/bench new-site erpnext.localhost
+2025-04-22 14:52:51,866 INFO /home/zotina/erpnext-env/bin/bench new-site erpnext.localhost
+2025-04-22 14:56:00,297 INFO /home/zotina/erpnext-env/bin/bench get-app https://github.com/frappe/erpnext
+2025-04-22 14:56:00,330 LOG Getting erpnext
+2025-04-22 14:56:00,331 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext  --depth 1 --origin upstream
+2025-04-22 14:56:17,156 LOG Installing erpnext
+2025-04-22 14:56:17,158 DEBUG cd /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench && /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/apps/erpnext 
+2025-04-22 14:56:58,724 DEBUG cd /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/apps/erpnext && yarn install --check-files
+2025-04-22 14:57:18,326 DEBUG bench build --app erpnext
+2025-04-22 14:57:18,917 INFO /home/zotina/erpnext-env/bin/bench build --app erpnext
+2025-04-22 14:58:08,227 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 15:14:15,519 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 15:15:21,888 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 15:15:23,071 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 15:15:23,133 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 15:15:23,133 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 15:15:23,146 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 15:15:42,075 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 15:18:29,020 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 15:26:57,414 INFO /home/zotina/erpnext-env/bin/bench get-app https://github.com/frappe/erpnext
+2025-04-22 15:28:30,047 INFO /home/zotina/erpnext-env/bin/bench get-app https://github.com/frappe/erpnext
+2025-04-22 15:28:34,266 LOG Installing erpnext
+2025-04-22 15:28:34,268 DEBUG cd /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench && /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/apps/erpnext 
+2025-04-22 15:28:43,639 DEBUG cd /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/apps/erpnext && yarn install --check-files
+2025-04-22 15:29:02,580 DEBUG bench build --app erpnext
+2025-04-22 15:29:03,191 INFO /home/zotina/erpnext-env/bin/bench build --app erpnext
+2025-04-22 15:32:18,653 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 15:32:19,866 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 15:32:19,909 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 15:32:19,916 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 15:32:19,941 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 15:34:14,045 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 15:34:59,128 INFO /home/zotina/erpnext-env/bin/bench drop-site erpnext.localhost
+2025-04-22 15:36:43,959 INFO /home/zotina/erpnext-env/bin/bench drop-site erpnext.localhost
+2025-04-22 15:42:36,539 INFO /home/zotina/erpnext-env/bin/bench new-site erpnext.localhost
+2025-04-22 15:42:46,288 INFO /home/zotina/erpnext-env/bin/bench new-site erpnext.localhost --force
+2025-04-22 15:43:11,066 INFO /home/zotina/erpnext-env/bin/bench new-site erpnext.localhost --force
+2025-04-22 15:45:09,547 INFO /home/zotina/erpnext-env/bin/bench get-app https://github.com/frappe/erpnext
+2025-04-22 15:45:24,448 LOG Installing erpnext
+2025-04-22 15:45:24,449 DEBUG cd /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench && /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/apps/erpnext 
+2025-04-22 15:45:33,172 DEBUG cd /home/zotina/Documents/etude/S6/evaluation/python/frappe-bench/apps/erpnext && yarn install --check-files
+2025-04-22 15:45:53,008 DEBUG bench build --app erpnext
+2025-04-22 15:45:53,658 INFO /home/zotina/erpnext-env/bin/bench build --app erpnext
+2025-04-22 16:48:32,910 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 16:49:48,831 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost list-apps
+2025-04-22 16:51:34,667 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 16:51:43,191 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost list-apps
+2025-04-22 16:52:10,916 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost reinstall
+2025-04-22 16:54:24,307 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 16:58:06,284 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost list-apps
+2025-04-22 18:00:02,039 INFO /home/zotina/erpnext-env/bin/bench --verbose --site all backup
+2025-04-22 19:43:43,308 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 19:43:43,821 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 19:43:43,844 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 19:43:43,858 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 19:43:43,862 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 20:17:05,421 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 20:17:05,838 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 20:17:05,864 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 20:17:05,877 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 20:17:05,911 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 20:32:16,356 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 20:32:16,790 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 20:32:16,819 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 20:32:16,830 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 20:32:16,850 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 20:34:16,478 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 20:34:16,908 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 20:34:16,912 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 20:34:16,966 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 20:34:16,979 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 20:38:51,838 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 20:38:52,244 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 20:38:52,318 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 20:38:52,324 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 20:38:52,344 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 20:40:01,860 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 20:40:02,282 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 20:40:02,308 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 20:40:02,334 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 20:40:02,370 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 20:46:51,792 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 20:46:52,214 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 20:46:52,223 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 20:46:52,236 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 20:46:52,287 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 22:52:06,217 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 22:52:06,636 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 22:52:06,696 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-22 22:52:06,722 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 22:52:06,734 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 22:52:17,298 INFO /home/zotina/erpnext-env/bin/bench restart
+2025-04-22 22:52:20,386 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-22 22:52:20,791 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-22 22:52:20,851 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-22 22:52:20,870 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-22 22:52:20,882 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-23 00:00:02,264 INFO /home/zotina/erpnext-env/bin/bench --verbose --site all backup
+2025-04-23 07:07:38,802 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-23 07:07:39,241 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-23 07:07:39,318 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-23 07:07:39,327 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-23 07:07:39,330 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-23 12:00:01,508 INFO /home/zotina/erpnext-env/bin/bench --verbose --site all backup
+2025-04-23 14:10:58,001 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-23 14:10:58,515 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-23 14:10:58,539 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-23 14:10:58,554 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-23 14:10:58,574 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-23 19:52:39,770 INFO /home/zotina/erpnext-env/bin/bench restart
+2025-04-23 19:52:44,692 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-23 19:52:44,968 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-23 19:52:44,970 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-23 19:52:44,976 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-23 19:52:44,980 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-23 19:54:07,413 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-23 19:54:07,657 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-23 19:54:07,671 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-23 19:54:07,693 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-23 19:54:07,699 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-23 19:54:12,564 INFO /home/zotina/erpnext-env/bin/bench restart
+2025-04-23 19:54:15,117 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-23 19:54:15,365 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-23 19:54:15,370 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-23 19:54:15,406 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-23 19:54:15,414 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-23 20:06:15,372 INFO /home/zotina/erpnext-env/bin/bench restart
+2025-04-23 20:06:17,881 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-23 20:06:18,122 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-23 20:06:18,137 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-23 20:06:18,143 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-23 20:06:18,177 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-23 20:22:36,179 INFO /home/zotina/erpnext-env/bin/bench pip install pyjwt
+2025-04-23 20:22:43,124 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-23 20:22:43,376 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-23 20:22:43,378 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-23 20:22:43,390 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-23 20:22:43,400 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-23 20:22:48,330 INFO /home/zotina/erpnext-env/bin/bench restart
+2025-04-23 20:22:51,634 INFO /home/zotina/erpnext-env/bin/bench restart
+2025-04-23 20:22:55,659 INFO /home/zotina/erpnext-env/bin/bench restart
+2025-04-23 20:23:00,575 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-23 20:23:00,831 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-23 20:23:00,844 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-23 20:23:00,851 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-23 20:23:00,858 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-23 20:32:33,302 INFO /home/zotina/erpnext-env/bin/bench restart
+2025-04-23 20:32:37,458 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-23 20:32:37,884 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-23 20:32:37,903 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-23 20:32:37,965 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-23 20:32:37,970 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-24 07:03:03,479 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-24 07:03:03,917 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-24 07:03:03,950 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-24 07:03:03,950 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-24 07:03:03,975 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-24 08:53:49,914 INFO /home/zotina/erpnext-env/bin/bench restart
+2025-04-24 08:53:55,962 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-24 08:53:56,884 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-24 08:53:56,899 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-24 08:53:57,081 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-24 08:53:57,096 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-24 09:20:43,795 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost migrate
+2025-04-24 09:21:50,132 INFO /home/zotina/erpnext-env/bin/bench restart
+2025-04-24 09:21:58,934 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-24 09:21:59,183 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-24 09:21:59,183 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-24 09:21:59,212 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-24 09:21:59,216 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-24 09:24:34,225 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost migrate
+2025-04-24 09:24:38,605 INFO /home/zotina/erpnext-env/bin/bench clear-cache
+2025-04-24 09:24:46,358 INFO /home/zotina/erpnext-env/bin/bench --site erpnext.localhost start
+2025-04-24 09:24:46,360 WARNING /home/zotina/erpnext-env/bin/bench --site erpnext.localhost start executed with exit code 2
+2025-04-24 09:25:58,143 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-24 09:25:58,438 INFO /home/zotina/erpnext-env/bin/bench worker
+2025-04-24 09:25:58,448 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-24 09:25:58,465 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-24 09:25:58,468 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-25 13:26:01,088 INFO /home/zotina/erpnext-env/bin/bench start
+2025-04-25 13:26:01,507 INFO /home/zotina/erpnext-env/bin/bench watch
+2025-04-25 13:26:01,509 INFO /home/zotina/erpnext-env/bin/bench serve --port 8000
+2025-04-25 13:26:01,510 INFO /home/zotina/erpnext-env/bin/bench schedule
+2025-04-25 13:26:01,515 INFO /home/zotina/erpnext-env/bin/bench worker
