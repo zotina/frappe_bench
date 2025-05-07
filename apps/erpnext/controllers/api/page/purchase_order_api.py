@@ -45,30 +45,32 @@ def get_purchase_order_list(supplier=None):
 
         # Compute 'received' and 'paid' booleans
         for po in purchase_orders:
-            # Set received: True if a Purchase Receipt exists for this Purchase Order
-            linked_receipts = frappe.get_all(
-                "Purchase Receipt Item",
-                filters={"purchase_order": po.name, "docstatus": 1},  # Submitted receipts only
-                fields=["parent"]
-            )
-            po["received"] = 1 if linked_receipts else 0
+            # Set received: True if per_received is 100%
+            po["received"] = 1 if po["per_received"] == 100 else 0
 
-            # Set paid: Check if Purchase Order is linked to a Paid Purchase Invoice
-            linked_invoices = frappe.get_all(
-                "Purchase Invoice Item",
-                filters={"purchase_order": po.name, "docstatus": 1},  # Submitted invoices only
-                fields=["parent"]
-            )
-            invoice_names = [item.parent for item in linked_invoices]
-            if invoice_names:
-                paid_invoices = frappe.get_all(
-                    "Purchase Invoice",
-                    filters={"name": ["in", invoice_names], "status": "Paid", "docstatus": 1},
-                    fields=["name"]
+            # Set paid: True if per_billed is 100% and all linked Purchase Invoices are Paid
+            if po["per_billed"] == 100:
+                linked_invoices = frappe.get_all(
+                    "Purchase Invoice Item",
+                    filters={"purchase_order": po.name, "docstatus": 1},  # Submitted invoices only
+                    fields=["parent"]
                 )
-                po["paid"] = 1 if paid_invoices else 0
+                invoice_names = [item.parent for item in linked_invoices]
+                if invoice_names:
+                    unpaid_invoices = frappe.get_all(
+                        "Purchase Invoice",
+                        filters={
+                            "name": ["in", invoice_names],
+                            "status": ["!=", "Paid"],
+                            "docstatus": 1
+                        },
+                        fields=["name"]
+                    )
+                    po["paid"] = 0 if unpaid_invoices else 1
+                else:
+                    po["paid"] = 0  # No invoices linked, so not paid
             else:
-                po["paid"] = 0
+                po["paid"] = 0  # per_billed is not 100%, so not paid
 
         # Fetch list of supplier names
         suppliers = frappe.get_all("Supplier", fields=["name"], order_by="name asc")

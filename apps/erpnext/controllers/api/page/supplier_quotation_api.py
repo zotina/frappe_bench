@@ -4,18 +4,19 @@ from erpnext.controllers.api.utils import validate_jwt
 
 @frappe.whitelist(allow_guest=False)
 @validate_jwt
-def get_supplier_quotation_list(supplier=None):
+def get_supplier_quotation_list(supplier=None, request_for_quotation=None):
     """
     REST API endpoint to fetch a list of Supplier Quotations with specific columns and child items.
     Args:
         supplier (str, optional): Filter by supplier name.
+        request_for_quotation (str, optional): Filter by Request for Quotation ID.
     Returns: List of Supplier Quotations with Title, Status, Date, Valid Till, Grand Total, ID, child items, and supplier list in metadata.
     Example usage:
-    http://erpnext.localhost:8000/api/method/erpnext.controllers.api.page.supplier_quotation_api.get_supplier_quotation_list?supplier=SUP-001
+    http://erpnext.localhost:8000/api/method/erpnext.controllers.api.page.supplier_quotation_api.get_supplier_quotation_list?supplier=SUP-001&request_for_quotation=RFQ-2025-00001
     Header: Authorization: Bearer <jwt_token>
     """
     try:
-        # Prepare filters
+        # Prepare filters for Supplier Quotation
         filters = {}
         if supplier:
             filters["supplier"] = supplier
@@ -36,12 +37,38 @@ def get_supplier_quotation_list(supplier=None):
             order_by="transaction_date desc"
         )
 
+        # Filter by request_for_quotation using Supplier Quotation Item
+        if request_for_quotation:
+            # Get Supplier Quotation Items linked to the RFQ
+            sq_items = frappe.get_all(
+                "Supplier Quotation Item",
+                filters={"request_for_quotation": request_for_quotation},
+                fields=["parent"],
+                distinct=True
+            )
+            # Extract parent Supplier Quotation names
+            valid_quotation_names = [item["parent"] for item in sq_items]
+            # Filter supplier_quotations to only include those linked to the RFQ
+            supplier_quotations = [
+                sq for sq in supplier_quotations
+                if sq["name"] in valid_quotation_names
+            ]
+
         # Fetch child items for each Supplier Quotation
         for quotation in supplier_quotations:
             child_items = frappe.get_all(
                 "Supplier Quotation Item",
                 filters={"parent": quotation["name"]},
-                fields=["name", "item_code", "item_name", "qty", "rate", "amount"]
+                fields=[
+                    "name",
+                    "item_code",
+                    "item_name",
+                    "qty",
+                    "rate",
+                    "amount",
+                    "request_for_quotation",
+                    "request_for_quotation_item"
+                ]
             )
             quotation["child"] = child_items
 
@@ -58,9 +85,9 @@ def get_supplier_quotation_list(supplier=None):
     except Exception as e:
         frappe.log_error(f"Error fetching Supplier Quotation list: {str(e)}", "Supplier Quotation API")
         frappe.local.response["status"] = "error"
-        frappe.local.response["message"] = _("An error occurred while fetching the Supplier Quotation list.")
+        frappe.local.response["message"] = (f"Error fetching Supplier Quotation list: {str(e)}", "Supplier Quotation API")
         return
-
+    
 @frappe.whitelist(allow_guest=False)
 @validate_jwt
 def get_supplier_quotation_item_details(parent):
